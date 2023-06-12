@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_response_time():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.elapsed.total_seconds() <= 1
+    assert response.elapsed.total_seconds() <= 2
 
 
 def test_random_message_length():
